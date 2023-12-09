@@ -14,11 +14,14 @@ import java.time.LocalDateTime;
 @Builder
 public class NewsDto implements Serializable {
     private Long newsId;
-    private String title;
-    private String subTitle;
-    private String content;
+    private String enTitle;
+    private String enSubtitle;
+    private String enContent;
     private LocalDateTime createdAt;
     private String category;
     private String videoURL;
     private String image;
+    private String elTitle;
+    private String elSubtitle;
+    private String elContent;
 }

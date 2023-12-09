@@ -6,9 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
-
-import java.time.LocalDateTime;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,26 +18,26 @@ public class Courses {
     @Id
     private String courseId;
 
-    private String title;
-    private String subTitle;
+    private String enTitle;
+    private String enSubtitle;
 
     @Lob
-    private String overview;
+    private String enOverview;
 
-    private String accreditations;
-    private String length;
-    private String sectors;
+    private String enAccreditations;
+    private String enLength;
+    private String enSectors;
     private String videoURL;
     private String templateType;
 
     @Lob
-    private String content;
+    private String enContent;
 
     @Lob
-    private String content2;
+    private String enContent2;
 
     @Lob
-    private String content3;
+    private String enContent3;
 
     @Lob
     private byte[] image;
@@ -50,5 +47,23 @@ public class Courses {
 
     @Lob
     private byte[] image3;
+
+    private String elTitle;
+    private String elSubtitle;
+
+    @Lob
+    private String elOverview;
+
+    private String elAccreditations;
+    private String elLength;
+    private String elSectors;
+    @Lob
+    private String elContent;
+
+    @Lob
+    private String elContent2;
+
+    @Lob
+    private String elContent3;
 
 }

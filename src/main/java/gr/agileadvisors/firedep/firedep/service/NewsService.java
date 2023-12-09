@@ -71,15 +71,17 @@ public class NewsService {
     }
 
     private News mapNewsCreateDtoToNews(NewsCreateDto newsCreateDto) {
-        return News.builder().title(newsCreateDto.getTitle()).subTitle(newsCreateDto.getSubTitle())
-                .content(newsCreateDto.getContent()).category(newsCreateDto.getCategory())
-                .videoURL(newsCreateDto.getVideoURL())
+        return News.builder().enTitle(newsCreateDto.getEnTitle()).enSubtitle(newsCreateDto.getEnSubtitle())
+                .enContent(newsCreateDto.getEnContent()).category(newsCreateDto.getCategory())
+                .videoURL(newsCreateDto.getVideoURL()).elTitle(newsCreateDto.getElTitle())
+                .elContent(newsCreateDto.getElContent()).elSubtitle(newsCreateDto.getElSubtitle())
                 .build();
     }
     private NewsDto mapNewsToNewsDto(News news){
-        return NewsDto.builder().newsId(news.getNewsId()).title(news.getTitle()).subTitle(news.getSubTitle())
-                .content(news.getContent()).category(news.getCategory()).videoURL(news.getVideoURL())
-                .createdAt(news.getCreatedAt())
+        return NewsDto.builder().newsId(news.getNewsId()).enTitle(news.getEnTitle()).enSubtitle(news.getEnSubtitle())
+                .enContent(news.getEnContent()).category(news.getCategory()).videoURL(news.getVideoURL())
+                .createdAt(news.getCreatedAt()).elTitle(news.getElTitle()).elContent(news.getElContent())
+                .elSubtitle(news.getElSubtitle())
                 .image(news.getImage() != null ? Base64.getEncoder().encodeToString(news.getImage()): null).build();
     }
 }

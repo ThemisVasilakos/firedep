@@ -12,9 +12,12 @@ import java.io.Serializable;
 @Data
 @Builder
 public class NewsCreateDto implements Serializable {
-    private String title;
-    private String subTitle;
-    private String content;
+    private String enTitle;
+    private String enSubtitle;
+    private String enContent;
     private String category;
     private String videoURL;
+    private String elTitle;
+    private String elSubtitle;
+    private String elContent;
 }

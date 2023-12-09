@@ -21,11 +21,17 @@ public class News {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long newsId;
 
-    private String title;
-    private String subTitle;
+    private String enTitle;
+    private String enSubtitle;
 
     @Lob
-    private String content;
+    private String enContent;
+
+    private String elTitle;
+    private String elSubtitle;
+
+    @Lob
+    private String elContent;
 
     @Column(updatable = false)
     @CreationTimestamp
