@@ -30,7 +30,7 @@ public class AuthenticationController {
         return userService.createUser(userRegisterDto);
     }
 
-    @CrossOrigin(origins = {"http://192.168.28.40:3000/","http://localhost:3000"})
+    @CrossOrigin(origins = {"http://192.168.28.40:3000/","http://localhost:3000","https://kepse.psnet.gr/"})
     @Operation(summary = "Login", description = "Login using credentials")
     @PostMapping("/login")
     public ResponseEntity<?> createAuthenticationToken(@RequestBody UserLoginDto userLoginDto) throws Exception {
