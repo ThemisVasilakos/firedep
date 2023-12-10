@@ -18,7 +18,7 @@ import java.io.IOException;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/firedep")
-@CrossOrigin(origins = "http://192.168.28.40:3000/",allowedHeaders = "*")
+@CrossOrigin(origins = {"http://192.168.28.40:3000/","http://localhost:3000"},allowedHeaders = "*")
 public class CoursesController {
 
     private final CoursesService coursesService;

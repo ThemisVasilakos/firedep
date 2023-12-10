@@ -67,9 +67,7 @@ public class SpringSecurityConfig {
                 .addFilterBefore(customJwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .headers(headers->headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin))
                 .authorizeHttpRequests(auth->{
-                    auth.requestMatchers("/api/v1/auth/**", "/v3/api-docs/**", "/swagger-ui/**")
-                            .permitAll()
-                            .requestMatchers ("/firedep/register","/firedep/login")
+                    auth.requestMatchers ("/firedep/register","/firedep/login")
                             .permitAll()
                             .requestMatchers(HttpMethod.GET,"/firedep/news","/firedep/news/{id}","/firedep/courses","/firedep/courses/{id}")
                             .permitAll()
